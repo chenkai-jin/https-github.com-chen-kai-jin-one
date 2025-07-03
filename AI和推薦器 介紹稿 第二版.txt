@@ -1,0 +1,19 @@
+**Recommendation System Method Description**
+
+**Selected Recommendation System Type**:  
+For this project, I will adopt a **content-based filtering** approach to build the movie recommendation system.
+
+**Reason for Selection**:  
+I chose content-based recommendation because the dataset I have prepared primarily contains descriptive information about movies (movie title, director, and key movie synopsis). Since I currently lack user interaction data such as ratings or viewing history, content-based recommendation is the most direct and effective way to utilize the available data.
+
+**How It Works**:  
+The recommendation system will generate recommendations based on the movie’s “one-sentence synopsis.” The core steps are as follows:
+
+1. **Text Embedding Generation**:  
+   I will use a powerful AI model (such as Google Gemini Embedding Models or Sentence-BERT) to convert each movie’s synopsis into a high-dimensional numerical vector, known as an “embedding.” These embeddings capture the semantic meaning of the movie synopses, ensuring that semantically similar synopses are positioned close to each other in the embedding space.
+
+2. **Similarity Calculation and Recommendation**:  
+   When a user selects a movie, the system will retrieve the embedding corresponding to that movie’s synopsis. It will then search the entire movie database to find embeddings of other movies that are “most similar” to this one. These most similar movies will be presented to the user as recommendations.
+
+**Tools Used**:  
+I will primarily use Python, along with the Pandas library for data processing, and the selected AI embedding model to implement the above functionality.
